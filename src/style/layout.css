@@ -1,0 +1,100 @@
+@import url(./styleGuideSet.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout {
+    background: var(--dark-blue);
+    width: 100%;
+    height: 100vh;
+    padding: 16px;
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main';
+    grid-template-rows: 56px auto;
+    row-gap: 40px;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    column-gap: 40px;
+}
+
+.header__logo {
+    width: 145px;
+    height: 35px;
+}
+
+.header__search-bar {
+    width: 100%;
+    max-width: 752px;
+}
+
+.header .close {
+    display: none;
+}
+
+.header .user-info {
+    display: none;
+}
+
+.main {
+    grid-area: main;
+}
+
+/* mobile first */
+@media screen and (max-width: 767px) {
+    .header__search-bar {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        max-width: 287px;
+    }
+
+    .header .mobile-icons {
+        display: flex;
+        column-gap: 8px;
+    }
+}
+
+/* tablet and small screens*/
+
+@media screen and (min-width: 768px) and (max-width: 1339px) {
+    .header__search-bar {
+        min-width: 431px;
+    }
+
+    .header .mobile-icons {
+        display: flex;
+        column-gap: 8px;
+    }
+
+    .header .search {
+        display: none;
+    }
+}
+
+/* desktop 1440p+*/
+
+@media screen and (min-width: 1340px) {
+    .header__search-bar {
+        min-width: 431px;
+    }
+
+    .header .mobile-icons {
+       display: none;
+    }
+
+    
+    .header .user-info {
+        display: inherit;
+    }
+}
