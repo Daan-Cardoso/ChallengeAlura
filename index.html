@@ -39,14 +39,62 @@
                     Danilo
                 </div>
             </div>
-        </header>
+        </header>      
+
         <main class="main">
-            <button class="menu-item">
-                <div class="icon-button menu-item__icon">
-                    <i class="fas fa-code"></i>
+            <nav class="main-menu">
+                <ul class="main-menu__list">
+                    <li class="main-menu__list__item">
+                        <h2 class="main-menu__title sidebar-title">Menu</h2>
+                    </li>
+                    <li class="main-menu__list__item">
+                        <button class="menu-item">
+                            <div class="icon-button menu-item__icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <p class="menu-item__text">Editor de Código</p>
+                        </button>
+                    </li>
+                    <li class="main-menu__list__item">
+                        <button class="menu-item">
+                            <div class="icon-button menu-item__icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <p class="menu-item__text">Comunidade</p>
+                        </button>
+                    </li>
+                </ul>
+                <div class="user-info">
+                    <img class="user-info__photo" src="https://via.placeholder.com/20x20" alt="">
+                    
+                    <div class="user-info__text">
+                        Danilo
+                    </div>
                 </div>
-                <p class="menu-item__text">teste</p>
-            </button>
+            </nav>
+
+            <section class="main-content">
+
+            </section>
+
+            <aside class="project-input">
+                <div class="project-input__section">
+                    <div class="project-input__title sidebar-title">
+                        Seu Projeto
+                    </div>
+
+                    <input class="input" type="text" placeholder="Nome do seu Projeto"/>
+                    <textarea class="input input--textarea" placeholder="Descrição do seu Projeto"></textarea>
+                </div>
+                <div class="project-input__section">
+                    <div class="project-input__title sidebar-title">
+                        Personalização
+                    </div>
+
+                    <select class="input"></select>
+                    <input class="input input--color" type="color" value="#6BD1FF">
+                </div>
+            </aside>
         </main>        
     </div>
 </body>
