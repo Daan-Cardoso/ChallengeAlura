@@ -14,5 +14,9 @@ Seguimos com a atual arquitetura de arquivos css:
 /src/style/
     |_______ style.css - para as estilizações de biblioteca;
     |_______ styleGuide.css - onde ficam armazenadas todas as variaveis passadas por meio do style guide;
-    |_______ layout.css - para separar todas as questões de responsividade
+    |_______ layout.css - para separar todas as questões de responsividade e layout;
 ```
+
+## Dia 03
+Alguns itens foram criados na biblioteca e mais elementos foram adicionados ao layout do index como o menu e os inputs de informações do projeto;
+Tudo que foi incluido no projeto já está projetado para manter a responsividade e também leva em consideração a semântica do HTML5;
