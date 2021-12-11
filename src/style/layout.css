@@ -38,16 +38,58 @@
     max-width: 752px;
 }
 
-.header .close {
-    display: none;
-}
+.header .close { display: none; }
 
-.header .user-info {
-    display: none;
-}
+.header .user-info { display: none; }
 
 .main {
     grid-area: main;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-menu {
+    background: var(--input-flat);
+    border-radius: var(--default-radius);
+    padding: 24px;
+    width: 254px;
+    height: 100%;
+    position: absolute;
+    top: -15px;
+    right: 0;
+    display: none;
+}
+
+.main-menu--active { display: block; }
+
+.main-menu__title { display: none; }
+
+.main-menu__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    border-bottom: 1px solid #ffffff14;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    list-style: none;
+}
+
+
+/* content */
+
+.project-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 40px;
+}
+
+.project-input__section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
 }
 
 /* mobile first */
@@ -63,6 +105,8 @@
         display: flex;
         column-gap: 8px;
     }
+
+    .main-menu { max-height: 571px; }
 }
 
 /* tablet and small screens*/
@@ -77,24 +121,37 @@
         column-gap: 8px;
     }
 
-    .header .search {
-        display: none;
+    .header .search { display: none; }
+
+    .main-menu {
+        max-height: 912px;
+        height: 100%;
     }
 }
 
 /* desktop 1440p+*/
 
 @media screen and (min-width: 1340px) {
-    .header__search-bar {
-        min-width: 431px;
-    }
+    .header__search-bar { min-width: 431px; }
 
-    .header .mobile-icons {
-       display: none;
-    }
-
+    .header .mobile-icons { display: none; }
     
-    .header .user-info {
-        display: inherit;
+    .header .user-info { display: inherit; }
+
+    .main-menu {
+        display: block;
+        background: none;
+        position: initial;
     }
+
+    .main-menu__title { display: block; }
+
+    .main-menu__list {
+        padding-bottom: 0;
+        border: none;
+    }
+
+    .main-menu .user-info { display: none; }
+
+    .project-input { max-width: 272px; }
 }
